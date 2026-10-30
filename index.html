@@ -18,17 +18,109 @@ aac<!DOCTYPE html>
     .note{padding:18px 22px;border:1px dashed #5b6b94;border-radius:14px;color:#c7d2e7;background:#131c31}.cta{margin:45px auto 70px;text-align:center;padding:48px 20px;border:1px solid #4d487b;border-radius:25px;background:linear-gradient(125deg,#132b42,#2c1d4d)}.cta h2{margin-top:0}footer{border-top:1px solid var(--line);padding:28px 0;color:#8f9fbd;text-align:center;font-size:.85rem}
     @media(max-width:800px){.grid{grid-template-columns:1fr 1fr}.hero{padding:75px 0}.nav{padding:15px 0}nav{gap:12px}}
     @media(max-width:540px){.grid{grid-template-columns:1fr}.btn.secondary{margin:10px 0 0}.hero h1{font-size:3.6rem}}
+
+    /* NOVA LIVE PULSE V2 */
+    .pulse-shell{border:1px solid #344464;background:linear-gradient(150deg,#141d35e8,#0d172ce8);border-radius:28px;padding:clamp(18px,3vw,32px);box-shadow:0 22px 65px #0004;overflow:hidden}
+    .pulse-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.pulse-head h2{margin:8px 0 0;font-size:clamp(1.9rem,4vw,2.7rem)}.pulse-head h2 span{color:var(--cyan)}
+    .pulse-sub{color:var(--muted);margin:6px 0 24px}.pulse-tabs{display:flex;gap:9px;overflow-x:auto;padding:0 0 14px;scrollbar-width:thin;scrollbar-color:#52658c transparent}
+    .pulse-tab{white-space:nowrap;cursor:pointer;border:1px solid #3a4a6b;border-radius:999px;padding:10px 17px;color:#cbd8f1;background:#18243e;font:700 .88rem system-ui;transition:background .2s,border-color .2s}
+    .pulse-tab:hover,.pulse-tab:focus-visible{border-color:var(--cyan)}.pulse-tab[aria-selected="true"]{background:linear-gradient(110deg,#16647c,#6843ac);color:white;border-color:#69dce9}
+    .pulse-row-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:16px 0}.pulse-row-head h3{margin:0;font-size:1.2rem}.pulse-row-head small{color:#a9b8d5}
+    .pulse-controls{display:flex;gap:8px}.pulse-arrow{width:39px;height:39px;border-radius:50%;border:1px solid #53688e;background:#1c2d4a;color:white;font-size:1.2rem;cursor:pointer}.pulse-arrow:hover{background:#2b4b75}.pulse-arrow:disabled{opacity:.35;cursor:default}
+    .pulse-track{display:flex;gap:17px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:5px 2px 20px;scrollbar-color:#587da1 #152139;scrollbar-width:thin}
+    .live-card{flex:0 0 clamp(225px,28vw,270px);scroll-snap-align:start;border:1px solid #334568;border-radius:20px;overflow:hidden;background:linear-gradient(150deg,#202c48,#121b30);box-shadow:0 12px 30px #0003}
+    .live-card-art{height:138px;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 25% 35%,#1e7792 0%,transparent 55%),radial-gradient(circle at 85% 70%,#7542a5 0%,transparent 50%),#182b46}
+    .live-card-art .symbol{font-size:3.5rem;filter:drop-shadow(0 8px 14px #0006)}.live-status{position:absolute;right:12px;top:12px;border-radius:999px;padding:4px 10px;background:#133e37;color:#8af6d6;font-size:.69rem;font-weight:900;letter-spacing:.06em}
+    .live-card-body{padding:17px}.live-card-body h4{font-size:1.05rem;margin:0 0 5px}.live-card-body .role{font-size:.75rem;color:#83e2f0;text-transform:uppercase;letter-spacing:.09em;font-weight:800}.live-card-body p{font-size:.86rem;color:#c2cee5;margin:8px 0}.live-card-body .place{color:#a6b7d4;min-height:25px}.live-card-body .teleport{display:block;text-align:center;margin-top:13px;padding:9px;border:1px solid #52688f;border-radius:11px;color:#e8f6ff;font-weight:700;font-size:.84rem;background:#243d62}
+    .demo-tag{color:#a8bad7;font-size:.78rem}.pulse-note{margin:20px 0 0;color:#b8c9e2;font-size:.86rem}.pulse-empty{color:#b8c9e2;padding:35px 8px}
+    .mission{margin:22px 0 0;text-align:center;padding:20px;border-radius:16px;background:linear-gradient(110deg,#17344b,#30204c);border:1px solid #3c5676}.mission strong{display:block;color:#f7f8ff;font-size:1.15rem}.mission span{color:#9ce3ef;font-size:.9rem}
+    @media(max-width:540px){.pulse-shell{padding:16px}.live-card{flex-basis:82%}.pulse-head h2{font-size:1.8rem}}
+    @media(prefers-reduced-motion:reduce){.pulse-track{scroll-behavior:auto}}
   </style>
 </head>
 <body>
   <header><div class="wrap nav"><a class="brand" href="#home">NOVA <span>LIVE</span></a><nav aria-label="Main navigation"><a href="#live">LIVE NOW</a><a href="#venues">VENUES</a><a href="#opportunities">JOBS & GIGS</a><a href="#hud">FREE HUD</a></nav></div></header>
   <main>
     <section class="hero wrap" id="home"><div class="eyebrow">THE SECOND LIFE ENTERTAINMENT NETWORK</div><h1>FEEL THE <span>LIVE.</span></h1><p>Where music, people & opportunities connect. Discover the energy of Second Life — from unforgettable sets to inspiring communities.</p><a class="btn" href="#live">Explore LIVE</a><a class="btn secondary" href="#opportunities">Find Opportunities</a></section>
-    <section class="wrap" id="live"><div class="section-top"><div><span class="pill">● LIVE PULSE</span><h2>On the air</h2><p>Your window into the Second Life music scene.</p></div></div><div class="grid"><article class="card"><div class="avatar">🎧</div><h3>DJ LIVE CARD</h3><div class="meta">DJ · Genre · Location</div><p>Avatar picture, SL teleport and LIVE status will appear here when a HUD starts.</p></article><article class="card"><div class="avatar">🎤</div><h3>ARTIST LIVE CARD</h3><div class="meta">Artist · Performance · Venue</div><p>Live performances will be added automatically through NOVA LIVE HUD.</p></article><article class="card"><div class="avatar">✨</div><h3>HOST LIVE CARD</h3><div class="meta">Host · Event · Location</div><p>Meet the people making every event special.</p></article></div><p class="note">Preview only: these are example cards. No real LIVE events are connected yet.</p></section>
+    <section class="wrap" id="live">
+      <div class="pulse-shell">
+        <div class="pulse-head"><div><span class="pill">● NOVA LIVE PULSE</span><h2>Discover who's <span>LIVE.</span></h2></div><span class="demo-tag">INTERACTIVE DESIGN PREVIEW</span></div>
+        <p class="pulse-sub">Explore the Second Life entertainment scene. Choose a category and scroll to discover more.</p>
+        <div class="pulse-tabs" role="tablist" aria-label="LIVE categories" id="pulse-tabs">
+          <button class="pulse-tab" role="tab" aria-selected="true" data-category="all">✦ All Live</button>
+          <button class="pulse-tab" role="tab" aria-selected="false" data-category="dj">🎧 DJs</button>
+          <button class="pulse-tab" role="tab" aria-selected="false" data-category="artist">🎨 Artists</button>
+          <button class="pulse-tab" role="tab" aria-selected="false" data-category="singer">🎤 Singers</button>
+          <button class="pulse-tab" role="tab" aria-selected="false" data-category="performer">✨ Performers</button>
+          <button class="pulse-tab" role="tab" aria-selected="false" data-category="host">🌟 Hosts</button>
+          <button class="pulse-tab" role="tab" aria-selected="false" data-category="club">🏙️ Clubs</button>
+        </div>
+        <div class="pulse-row-head"><div><h3 id="pulse-title">All Live</h3><small id="pulse-count">Demo entries</small></div><div class="pulse-controls"><button type="button" class="pulse-arrow" id="pulse-prev" aria-label="Scroll cards left">←</button><button type="button" class="pulse-arrow" id="pulse-next" aria-label="Scroll cards right">→</button></div></div>
+        <div class="pulse-track" id="pulse-track" tabindex="0" aria-label="Horizontally scrollable LIVE cards"></div>
+        <p class="pulse-note">✦ Demo profiles only — no real HUDs are connected yet. Teleport links will become active when real Second Life locations are available.</p>
+        <div class="mission"><strong>Free for Everyone. Made with Heart. ❤️</strong><span>Music connects us. Passion drives us. Community brings us together.</span></div>
+      </div>
+    </section>
     <section class="wrap" id="venues"><div class="section-top"><div><h2>Discover Venues</h2><p>Explore clubs, lounges and destinations across Second Life.</p></div></div><div class="grid"><article class="card feature"><div class="avatar">🏙️</div><h3>Club Directory</h3><p>Club profiles, images, genres, opening hours and teleport links.</p></article><article class="card feature"><div class="avatar">🌴</div><h3>Unique Locations</h3><p>From beachfront stages to elegant late-night lounges.</p></article><article class="card feature"><div class="avatar">🌟</div><h3>NOVA Spotlight</h3><p>A space for emerging talent and exceptional venues.</p></article></div></section>
     <section class="wrap" id="opportunities"><div class="section-top"><div><h2>Jobs & Opportunities</h2><p>Connect talent with the places that need it.</p></div></div><div class="grid"><article class="card feature"><strong>01</strong><h3>Club Hiring</h3><p>Clubs looking for DJs, hosts, artists and staff.</p></article><article class="card feature"><strong>02</strong><h3>DJs Looking for Gigs</h3><p>Find your next stage and connect with venue owners.</p></article><article class="card feature"><strong>03</strong><h3>Hosts Looking for Work</h3><p>Bring your energy and personality to new events.</p></article><article class="card feature"><strong>04</strong><h3>Artists Looking for Gigs</h3><p>Discover new performance opportunities.</p></article><article class="card feature"><strong>05</strong><h3>Event Partnerships</h3><p>Collaborate on unforgettable experiences.</p></article><article class="card feature"><strong>06</strong><h3>Community Connections</h3><p>Build friendships and creative partnerships.</p></article></div></section>
     <section class="wrap" id="hud"><div class="cta"><span class="pill">COMING SOON</span><h2>Your stage. Your moment. Your NOVA.</h2><p>With the free NOVA LIVE HUD, your performance will appear on the platform when you press START.</p><a class="btn" href="#home">Back to Top</a></div></section>
   </main>
   <footer>© NOVA LIVE · The Second Life Entertainment Network · Independent community project</footer>
+  <script>
+    // Sample data only. Later replaced by verified LIVE HUD data from our server.
+    const demoEntries = [
+      {name:'DJ Nova',type:'dj',genre:'Trance · Progressive',location:'Rhythm Club Lounge',icon:'🎧'},
+      {name:'DJ Skyline',type:'dj',genre:'House · Dance',location:'Neon Nights',icon:'🎛️'},
+      {name:'DJ Eclipse',type:'dj',genre:'Techno · Electronic',location:'Club Horizon',icon:'🎧'},
+      {name:'DJ Aurora',type:'dj',genre:'EDM · Dance',location:'Moonlight Stage',icon:'🎶'},
+      {name:'DJ Pulse',type:'dj',genre:'Deep House',location:'Ocean Lounge',icon:'🎚️'},
+      {name:'Luna Arts',type:'artist',genre:'Live Art · Creative',location:'NOVA Stage',icon:'🎨'},
+      {name:'Nova Star',type:'artist',genre:'Creative Show',location:'Event Arena',icon:'🌠'},
+      {name:'Melody Star',type:'singer',genre:'Pop · Live Vocals',location:'Moonlight Lounge',icon:'🎤'},
+      {name:'Soul Harmony',type:'singer',genre:'Soul · Jazz',location:'Blue Stage',icon:'🎵'},
+      {name:'Aurora Lights',type:'performer',genre:'Dance Performance',location:'NOVA Stage',icon:'✨'},
+      {name:'Phoenix Show',type:'performer',genre:'Stage Entertainment',location:'Event Arena',icon:'🎭'},
+      {name:'Alex Host',type:'host',genre:'Event Hosting',location:'Rhythm Club',icon:'🌟'},
+      {name:'Sky Host',type:'host',genre:'Live Event',location:'Neon Nights',icon:'🎙️'},
+      {name:'Rhythm Club Lounge',type:'club',genre:'House · Trance',location:'Second Life',icon:'🏙️'},
+      {name:'Neon Nights',type:'club',genre:'EDM · Dance',location:'Second Life',icon:'🌃'},
+      {name:'Club Horizon',type:'club',genre:'Electronic',location:'Second Life',icon:'🌌'},
+      {name:'Sunset Lounge',type:'club',genre:'Chillout · Pop',location:'Second Life',icon:'🌴'},
+      {name:'Crystal Club',type:'club',genre:'Dance · Pop',location:'Second Life',icon:'💎'}
+    ];
+    const labels={all:'All Live',dj:'DJs LIVE',artist:'Artists LIVE',singer:'Singers LIVE',performer:'Performers LIVE',host:'Hosts LIVE',club:'Clubs Online'};
+    const roles={dj:'DJ',artist:'Artist',singer:'Singer',performer:'Performer',host:'Host',club:'Club'};
+    const track=document.getElementById('pulse-track');
+    const tabs=[...document.querySelectorAll('.pulse-tab')];
+    const prev=document.getElementById('pulse-prev');
+    const next=document.getElementById('pulse-next');
+    function updateArrows(){const max=track.scrollWidth-track.clientWidth;prev.disabled=track.scrollLeft<=2;next.disabled=track.scrollLeft>=max-2;}
+    function showCategory(category){
+      tabs.forEach(t=>{const selected=t.dataset.category===category;t.setAttribute('aria-selected',String(selected));t.tabIndex=selected?0:-1;});
+      const entries=category==='all'?demoEntries:demoEntries.filter(e=>e.type===category);
+      document.getElementById('pulse-title').textContent=labels[category];
+      document.getElementById('pulse-count').textContent=entries.length+' sample profiles';
+      track.replaceChildren();
+      entries.forEach(entry=>{
+        const card=document.createElement('article');card.className='live-card';
+        const art=document.createElement('div');art.className='live-card-art';
+        const icon=document.createElement('span');icon.className='symbol';icon.textContent=entry.icon;
+        const status=document.createElement('span');status.className='live-status';status.textContent=entry.type==='club'?'● OPEN DEMO':'● LIVE DEMO';art.append(icon,status);
+        const body=document.createElement('div');body.className='live-card-body';
+        const role=document.createElement('div');role.className='role';role.textContent=roles[entry.type];
+        const name=document.createElement('h4');name.textContent=entry.name;
+        const genre=document.createElement('p');genre.textContent=entry.genre;
+        const place=document.createElement('p');place.className='place';place.textContent='⌖ '+entry.location;
+        const teleport=document.createElement('span');teleport.className='teleport';teleport.textContent='Teleport · Coming Soon';
+        body.append(role,name,genre,place,teleport);card.append(art,body);track.append(card);
+      });
+      track.scrollLeft=0;requestAnimationFrame(updateArrows);
+    }
+    tabs.forEach((tab,index)=>{tab.addEventListener('click',()=>showCategory(tab.dataset.category));tab.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const n=(index+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[n].focus();showCategory(tabs[n].dataset.category);}});});
+    prev.addEventListener('click',()=>track.scrollBy({left:-track.clientWidth*.8,behavior:'smooth'}));
+    next.addEventListener('click',()=>track.scrollBy({left:track.clientWidth*.8,behavior:'smooth'}));
+    track.addEventListener('scroll',updateArrows,{passive:true});window.addEventListener('resize',updateArrows);
+    showCategory('all');
+  </script>
 </body>
 </html>
